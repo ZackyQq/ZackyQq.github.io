@@ -6,10 +6,12 @@
 -->
 <html>
 	<head>
-		<title>Two Column 1 - Minimaxing by HTML5 UP</title>
+		<title>Integrals</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 	</head>
 	<body>
 		<div id="page-wrapper">
@@ -23,7 +25,7 @@
 								<header id="header">
 									<h1><a href="index.html" id="logo">Minimaxing</a></h1>
 									<nav id="nav">
-										<a href="index.html">Homepage</a>
+										<a href="index.html">Homee</a>
 										<a href="twocolumn1.html" class="current-page-item">Two Column #1</a>
 										<a href="twocolumn2.html">Two Column #2</a>
 										<a href="onecolumn.html">One Column</a>
@@ -43,29 +45,26 @@
 							<div class="col-8 col-12-medium">
 
 								<section>
-									<h2>Two Column #1 (right-hand sidebar)</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ante ante, viverra a ornare sed, convallis sed est. Proin felis sapien, adipiscing quis eleifend vel, sodales vitae sapien. Donec vel lacus leo, eu convallis metus. Cras egestas feugiat tortor, vitae interdum augue aliquam a. Sed nec augue id orci egestas commodo in eget magna. Nunc eleifend diam non odio laoreet placerat gravida nulla bibendum. Phasellus tempus imperdiet suscipit.</p>
-									<p>Mauris risus nulla, pulvinar vitae sagittis a, pharetra nec tellus. Suspendisse varius enim ac felis mattis aliquam. Aenean et justo quis ipsum gravida lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia bibendum cursus. Nullam nec pellentesque lacus. In porta erat in tortor rhoncus quis accumsan magna pretium. Nulla posuere magna eget mauris lacinia in mollis sem fermentum. Donec mollis adipiscing mauris, ut posuere enim rhoncus ut. Nunc commodo vestibulum orci vel placerat. Cras sed risus libero. Donec ac lacus vitae lectus mattis commodo id vitae libero. Etiam lorem odio, volutpat nec pulvinar sit amet, tincidunt ut lacus. Pellentesque consequat arcu vel nisi lobortis in pellentesque orci sollicitudin. Cras gravida lacus turpis, consectetur porttitor lectus. Cras malesuada tortor id neque porta ut semper quam iaculis.</p>
-									<p>Nulla ut tortor quam, a luctus nunc. Nulla condimentum diam porttitor arcu placerat tincidunt. Nunc non augue ipsum. Nulla facilisi. Phasellus feugiat augue in ipsum egestas semper. Suspendisse blandit, nisl ullamcorper blandit sollicitudin, sem leo auctor lectus, et volutpat mauris elit et odio. Ut elementum risus in metus mollis tristique vulputate nulla interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae orci dui, ut facilisis dui.</p>
+									<p> Why integrals?</p>
+									<p>Honestly, I'd love to know the answer too!</p>
 								</section>
 
 							</div>
 							<div class="col-4 col-12-medium">
 
 								<section>
-									<h2>Who are you guys?</h2>
-									<ul class="small-image-list">
-										<li>
-											<a href="#"><img src="images/pic2.jpg" alt="" class="left" /></a>
-											<h4>Jane Anderson</h4>
-											<p>Varius nibh. Suspendisse vitae magna eget et amet mollis justo facilisis amet quis.</p>
-										</li>
-										<li>
-											<a href="#"><img src="images/pic1.jpg" alt="" class="left" /></a>
-											<h4>James Doe</h4>
-											<p>Vitae magna eget odio amet mollis justo facilisis amet quis. Sed sagittis consequat.</p>
-										</li>
-									</ul>
+									$$I(a,b)=\int_0^\infty \exp{\left(-\frac{(a+bx)^2}{x}\right)}\frac{dx}{\sqrt{x^3}}\overset{x\to x^2}=2\int_0^\infty \exp{\left(-\frac{(a+bx^2)^2}{x^2}\right)}\frac{dx}{x^2}$$
+$$\overset{\large \frac{1}{x}\to x}=\color{blue}{2\int_0^\infty \exp{\left(-{(ax+b/x)^2}\right)}dx}\overset{\large x\to \frac{b}{ax}}=\color{red}{\frac{2b}{a}\int_0^\infty \exp\left(-(ax+b/x)^2\right)\frac{dx}{x^2}}$$
+$$\color{purple}{2I(a,b)}=\color{purple}{2\int_0^\infty \exp\left(-(ax+b/x)^2\right)}\left(\color{blue}{1}+\color{red}{\frac{b}{ax^2}}\right)dx$$
+It would have been perfect if we had $(ax-b/x)$ instead of $(ax+b/x)$ since it's derivative would be found in $\left(1+b/(ax^2)\right)$, but we can adjust things:
+
+$$(ax+b/x)^2=a^2 x^2+b^2/x^2+2ab$$
+$$ (ax-b/x)^2=a^2x^2+b^2/x^2-2ab$$
+$$\Rightarrow (ax+b/x)^2=(ax-b/x)^2+4ab$$
+
+$$\Rightarrow I(a,b)=\frac{e^{-4ab}}{a}\int_0^\infty \exp\left(-(ax-b/x)^2\right)\left(a+\frac{b}{x^2}\right)dx$$
+$$\overset{ax-b/x=t}=\frac{e^{-4ab}}{a}\int_{-\infty}^\infty e^{-t^2}dt=\frac{\sqrt{\pi}e^{-4ab}}{a}$$
+
 								</section>
 
 								<section>
