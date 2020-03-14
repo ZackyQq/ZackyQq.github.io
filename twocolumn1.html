@@ -6,12 +6,22 @@
 -->
 <html>
 	<head>
-		<title>QqQ</title>
+		<title>QQ</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 	</head>
 	<body>
 		<div id="page-wrapper">
@@ -56,7 +66,7 @@
 									$$I(a,b)=\int_0^\infty \exp{\left(-\frac{(a+bx)^2}{x}\right)}\frac{dx}{\sqrt{x^3}}\overset{x\to x^2}=2\int_0^\infty \exp{\left(-\frac{(a+bx^2)^2}{x^2}\right)}\frac{dx}{x^2}$$
 									$$\overset{\large \frac{1}{x}\to x}=\color{blue}{2\int_0^\infty \exp{\left(-{(ax+b/x)^2}\right)}dx}\overset{\large x\to \frac{b}{ax}}=\color{red}{\frac{2b}{a}\int_0^\infty \exp\left(-(ax+b/x)^2\right)\frac{dx}{x^2}}$$
 									$$\color{purple}{2I(a,b)}=\color{purple}{2\int_0^\infty \exp\left(-(ax+b/x)^2\right)}\left(\color{blue}{1}+\color{red}{\frac{b}{ax^2}}\right)dx$$
-<p>It would have been perfect if we had  $(ax-b/x)$ instead of \$(ax+b/x)\$ since it's derivative would be found in \$\left(1+b/(ax^2)\right)\$, but we can adjust things:
+<p>It would have been perfect if we had  $(ax-b/x)$ instead of $(ax+b/x)$ since it's derivative would be found in $\left(1+b/(ax^2)\right)$, but we can adjust things:
 									</p>									
 $$(ax+b/x)^2=a^2 x^2+b^2/x^2+2ab$$
 $$ (ax-b/x)^2=a^2x^2+b^2/x^2-2ab$$
