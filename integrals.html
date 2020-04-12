@@ -45,11 +45,9 @@
 							<div class="col-12">
 
 								<section>
-									$$I(a,b)=\int_0^\infty \exp{\left(-\frac{(a+bx)^2}{x}\right)}\frac{dx}{\sqrt{x^3}}\overset{x\to x^2}=2\int_0^\infty \exp{\left(-\frac{(a+bx^2)^2}{x^2}\right)}\frac{dx}{x^2}$$
-									$$\overset{\large \frac{1}{x}\to x}=\color{blue}{2\int_0^\infty \exp{\left(-{(ax+b/x)^2}\right)}dx}\overset{\large x\to \frac{b}{ax}}=\color{red}{\frac{2b}{a}\int_0^\infty \exp\left(-(ax+b/x)^2\right)\frac{dx}{x^2}}$$
-									$$\color{purple}{2I(a,b)}=\color{purple}{2\int_0^\infty \exp\left(-(ax+b/x)^2\right)}\left(\color{blue}{1}+\color{red}{\frac{b}{ax^2}}\right)dx$$
-									<p>It would have been perfect if we had  $(ax-b/x)$ instead of \(ax+b/x\) since it's derivative would be found in $\left(1+b/(ax^2)\right)$, but we can adjust things:
-									</p>									
+									$$\int_{-\infty}^\infty \frac{e^{-x^2}}{\color{blue}{1+x^4}}dx=\int_{-\infty}^\infty e^{-x^2}\color{blue}{\int_0^\infty e^{-x^2 t} \sin t \,dt} dx=\int_0^\infty \sin t\color{red}{\int_{-\infty}^\infty e^{-(1+t)x^2}dx}dt$$
+									$$=\color{red}{\sqrt \pi} \int_0^\infty\frac{\sin t}{\color{red}{\sqrt{1+t}}}dt\overset{1+t=x^2}=2\sqrt{\pi}\int_1^\infty \sin(x^2-1)dx$$$$=2\sqrt{\pi} \cos 1 \int_1^\infty\sin(x^2)dx-2\sqrt{\pi} \sin  1 \int_1^\infty\cos(x^2)dx $$
+									$$=\boxed{\pi\cos 1\frac{1-2S\left(\sqrt{\frac{2}{\pi}}\right)}{\sqrt 2}-\pi\sin 1\frac{1-2C\left(\sqrt{\frac{2}{\pi}}\right)}{\sqrt 2}}$$
 								</section>
 
 							</div>
