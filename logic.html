@@ -28,7 +28,7 @@
 							<div class="col-12">
 
 								<header id="header">
-									<h1><a href="index.html" id="logo">Home</a></h1>
+									<h1><a href="index.html" id="logo">qq</a></h1>
 									<nav id="nav">
 										<a href="integrals.html">Integrals</a>
 										<a href="logic.html">Logic</a>
@@ -45,6 +45,9 @@
 							<div class="col-12">
 
 								<section>
+									\begin{align} (\neg P \lor Q) \land (\neg Q \lor P) &\equiv[(\neg P\lor Q) \land \neg Q] \lor [(\neg P\lor Q)\land P] \\
+&\equiv [(\neg P \land \neg Q) \lor (Q\land \neg Q)]\lor [(\neg P\land P)\lor (Q\land P)] \\
+&\equiv (\neg P\land \neg Q) \lor (Q\land P).\end{align}
 									$$I(a,b)=\int_0^\infty \exp{\left(-\frac{(a+bx)^2}{x}\right)}\frac{dx}{\sqrt{x^3}}\overset{x\to x^2}=2\int_0^\infty \exp{\left(-\frac{(a+bx^2)^2}{x^2}\right)}\frac{dx}{x^2}$$
 									$$\overset{\large \frac{1}{x}\to x}=\color{blue}{2\int_0^\infty \exp{\left(-{(ax+b/x)^2}\right)}dx}\overset{\large x\to \frac{b}{ax}}=\color{red}{\frac{2b}{a}\int_0^\infty \exp\left(-(ax+b/x)^2\right)\frac{dx}{x^2}}$$
 									$$\color{purple}{2I(a,b)}=\color{purple}{2\int_0^\infty \exp\left(-(ax+b/x)^2\right)}\left(\color{blue}{1}+\color{red}{\frac{b}{ax^2}}\right)dx$$
