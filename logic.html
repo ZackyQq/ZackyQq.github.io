@@ -21,6 +21,7 @@
 	
 	<body>
 		<div id="page-wrapper">
+
 				<div id="header-wrapper">
 					<div class="container">
 						<div class="row">
@@ -29,11 +30,10 @@
 								<header id="header">
 									<h1><a href="index.html" id="logo">Home</a></h1>
 									<nav id="nav">
-										<a href="integrals.html">Integrals</a>
-										<a href="logic.html">Logic</a>
+										<a href="twocolumn1.html">Integrals</a>
+										<a href="onecolumn.html">Logic</a>
 									</nav>
 								</header>
-
 							</div>
 						</div>
 					</div>
@@ -42,15 +42,7 @@
 				<div id="main">
 					<div class="container">
 						<div class="row main-row">
-							<div class="col-8 col-12-medium">
-
-								<section>
-									<p> Why integrals?</p>
-									<p>Honestly, I'd love to know the answer too!</p>
-								</section>
-
-							</div>
-							<div class="col-4 col-12-medium">
+							<div class="col-12">
 
 								<section>
 									$$I(a,b)=\int_0^\infty \exp{\left(-\frac{(a+bx)^2}{x}\right)}\frac{dx}{\sqrt{x^3}}\overset{x\to x^2}=2\int_0^\infty \exp{\left(-\frac{(a+bx^2)^2}{x^2}\right)}\frac{dx}{x^2}$$
@@ -59,11 +51,12 @@
 									<p>It would have been perfect if we had  $(ax-b/x)$ instead of \(ax+b/x\) since it's derivative would be found in $\left(1+b/(ax^2)\right)$, but we can adjust things:
 									</p>									
 								</section>
+
 							</div>
 						</div>
 					</div>
 				</div>
-		</div>
+
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
